@@ -1,3 +1,12 @@
 * Make sure the app folder is there
 * Verify Dockerfile
 * docker build .
+
+
+
+
+
+
+
+* Docker compose helps us to run our project easily
+* Easy manage the diff service e.g. Python service,Postgres Database etc
