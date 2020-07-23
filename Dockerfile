@@ -4,7 +4,7 @@ MAINTAINER Sourabh Sinha - MbeforL #Best Practice
 ENV PYTHONUNBUFFERED 1
 #Recommended for Python
 
-COPY ./requirement.txt /requirements.txt
+COPY ./requirements.txt /requirements.txt
 
 RUN pip install -r /requirements.txt
 
