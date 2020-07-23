@@ -1,0 +1,13 @@
+* Make sure the app folder is there
+* Verify Dockerfile
+* docker build .
+* docker-compose build
+* docker-compose run app sh -c "django-admin startproject app."
+# docker-compose run (service-name) shell command -> "django-admin startproject app on the WORKDIR at that location"
+
+
+
+
+
+* Docker compose helps us to run our project easily
+* Easy manage the diff service e.g. Python service,Postgres Database etc
