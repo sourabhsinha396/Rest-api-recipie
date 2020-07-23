@@ -2,7 +2,8 @@
 * Verify Dockerfile
 * docker build .
 * docker-compose build
-
+* docker-compose run app sh -c "django-admin startproject app."
+# docker-compose run (service-name) shell command -> "django-admin startproject app on the WORKDIR at that location"
 
 
 
