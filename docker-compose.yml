@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  app:
+    build:
+      context: .
+
+    ports:
+      - "8000:8000" #8000 port on our host to 8000 in 8000 in image
+    volumes:        # So that whenever we make some changes,add file in our current app outside it will see  that and update in Docker Image
+      - ./app:/app
+      #sh -c means -> shell run this command and "0.0.0.0:8000" means run on all ip address available on docker image and map to port 8000 on our local machine
+    command: >
+     sh -c "python manage.py runserver 0.0.0.0:8000" 
