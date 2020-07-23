@@ -1,0 +1,3 @@
+* Make sure the app folder is there
+* Verify Dockerfile
+* docker run build
