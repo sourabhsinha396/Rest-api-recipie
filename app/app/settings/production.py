@@ -27,6 +27,11 @@ INSTALLED_APPS = [
     #my apps
     'core',
     'user_related',
+    'recipies',
+
+    #Third partyyy!!!
+    'rest_framework',
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
