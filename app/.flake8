@@ -4,3 +4,16 @@ exclude =
   __pycache__,
   manage.py,
   settings.py
+
+ignore=
+ E101,
+ W291,
+ W191,
+ E251,
+ E262,
+ E128,
+ E126,
+ E123,
+ E124,
+ E221,
+ E231 dir/

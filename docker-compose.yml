@@ -11,4 +11,23 @@ services:
       - ./app:/app
       #sh -c means -> shell run this command and "0.0.0.0:8000" means run on all ip address available on docker image and map to port 8000 on our local machine
     command: >
-     sh -c "python manage.py runserver 0.0.0.0:8000" 
+     sh -c "python manage.py wait_for_db && 
+            python manage.py migrate &&
+            python manage.py runserver 0.0.0.0:8000" 
+    environment:
+      - DB_HOST = db 
+      - DB_NAME = app
+      - DB_USER = postgres
+      - DB_PASS = Testing@123
+      # Our database should be available before this service starts
+    depends_on:
+      - db
+
+
+
+  db:
+    image: postgres:10-alpine
+    environment:
+      - POSTGRES_DB   = app
+      - POSTGRES_USER = postgres
+      - POSTGRES_PASSWORD = Testing@123
